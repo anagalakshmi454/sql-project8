@@ -1,0 +1,17 @@
+CREATE PROCEDURE:
+
+CREATE PROCEDURE GetEmployeesByDepartment(IN dept_name VARCHAR(255))
+BEGIN
+    SELECT employee_id, name, department, salary 
+    FROM employees 
+    WHERE department = dept_name;
+END;
+
+
+CREATE FUNCTION:
+
+CREATE FUNCTION CalculateAnnualSalary(monthly_salary DECIMAL(10,2))
+RETURNS DECIMAL(10,2)
+BEGIN
+    RETURN monthly_salary * 12;
+END;
